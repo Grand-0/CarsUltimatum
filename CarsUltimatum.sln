@@ -1,0 +1,92 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{70145795-8B70-4F62-AF3A-2D66A62A13E7}"
+	ProjectSection(SolutionItems) = preProject
+		AddDefaultValues.sql = AddDefaultValues.sql
+		CreateDatabaseTables.sql = CreateDatabaseTables.sql
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{FDCF6347-3659-4933-8202-9D849776A1AC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{9F2581C7-C67C-461C-9B50-A9FD20E1EC77}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{A3EF9C9D-BE04-46BD-9D24-C0F9372AFD90}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9F2581C7-C67C-461C-9B50-A9FD20E1EC77} = {9F2581C7-C67C-461C-9B50-A9FD20E1EC77}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{0F1C6453-336C-4BBF-837E-D9F33693C65B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Companies", "Companies", "{A0036BA2-972D-4512-8F6B-30C2263EB07C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CarClasses", "CarClasses", "{77F882A9-0F22-4D86-9013-127905F1CB6C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ford", "Ford", "{6E7BA95F-07A6-40D3-8152-ED172B8AD4A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Volkswagen", "Volkswagen", "{A2E6273C-CFE6-4677-A336-1BF560786570}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cars", "Cars", "{8C361200-2759-4F5B-BD6C-C5969EE99EB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logo", "Logo", "{2FCE5E26-3567-4CBC-8292-02290F58439A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transit Kombi", "Transit Kombi", "{0C2C1EE6-9750-4116-9ED5-D5F97E1ED9DA}"
+	ProjectSection(SolutionItems) = preProject
+		Images\Companies\Ford\Cars\Transit Kombi\001.png = Images\Companies\Ford\Cars\Transit Kombi\001.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cars", "Cars", "{D047F483-CC1F-42E6-87B8-28D08D7F1AAE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logo", "Logo", "{17DE328A-D6E8-4734-81DE-2965C199EEB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Polo", "Polo", "{CCBD6553-6152-4F58-8793-58144323D8D1}"
+	ProjectSection(SolutionItems) = preProject
+		Images\Companies\Volkswagen\Cars\Polo\001.png = Images\Companies\Volkswagen\Cars\Polo\001.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tiguan Status", "Tiguan Status", "{716E7C1C-4EDB-4BD9-B4B4-34D5F303F8D3}"
+	ProjectSection(SolutionItems) = preProject
+		Images\Companies\Volkswagen\Cars\Tiguan Status\001.png = Images\Companies\Volkswagen\Cars\Tiguan Status\001.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDCF6347-3659-4933-8202-9D849776A1AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDCF6347-3659-4933-8202-9D849776A1AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDCF6347-3659-4933-8202-9D849776A1AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDCF6347-3659-4933-8202-9D849776A1AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F2581C7-C67C-461C-9B50-A9FD20E1EC77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F2581C7-C67C-461C-9B50-A9FD20E1EC77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F2581C7-C67C-461C-9B50-A9FD20E1EC77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F2581C7-C67C-461C-9B50-A9FD20E1EC77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3EF9C9D-BE04-46BD-9D24-C0F9372AFD90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3EF9C9D-BE04-46BD-9D24-C0F9372AFD90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3EF9C9D-BE04-46BD-9D24-C0F9372AFD90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3EF9C9D-BE04-46BD-9D24-C0F9372AFD90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A0036BA2-972D-4512-8F6B-30C2263EB07C} = {0F1C6453-336C-4BBF-837E-D9F33693C65B}
+		{77F882A9-0F22-4D86-9013-127905F1CB6C} = {0F1C6453-336C-4BBF-837E-D9F33693C65B}
+		{6E7BA95F-07A6-40D3-8152-ED172B8AD4A7} = {A0036BA2-972D-4512-8F6B-30C2263EB07C}
+		{A2E6273C-CFE6-4677-A336-1BF560786570} = {A0036BA2-972D-4512-8F6B-30C2263EB07C}
+		{8C361200-2759-4F5B-BD6C-C5969EE99EB7} = {6E7BA95F-07A6-40D3-8152-ED172B8AD4A7}
+		{2FCE5E26-3567-4CBC-8292-02290F58439A} = {6E7BA95F-07A6-40D3-8152-ED172B8AD4A7}
+		{0C2C1EE6-9750-4116-9ED5-D5F97E1ED9DA} = {8C361200-2759-4F5B-BD6C-C5969EE99EB7}
+		{D047F483-CC1F-42E6-87B8-28D08D7F1AAE} = {A2E6273C-CFE6-4677-A336-1BF560786570}
+		{17DE328A-D6E8-4734-81DE-2965C199EEB8} = {A2E6273C-CFE6-4677-A336-1BF560786570}
+		{CCBD6553-6152-4F58-8793-58144323D8D1} = {D047F483-CC1F-42E6-87B8-28D08D7F1AAE}
+		{716E7C1C-4EDB-4BD9-B4B4-34D5F303F8D3} = {D047F483-CC1F-42E6-87B8-28D08D7F1AAE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {375D9094-7825-45D8-87F5-498B7A226E42}
+	EndGlobalSection
+EndGlobal

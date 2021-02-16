@@ -1,0 +1,12 @@
+D:\Programming\С#\Progects\CarsUltimatum\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.deps.json
+D:\Programming\С#\Progects\CarsUltimatum\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.dll
+D:\Programming\С#\Progects\CarsUltimatum\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.csprojAssemblyReference.cache
+D:\Programming\С#\Progects\CarsUltimatum\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.AssemblyInfoInputs.cache
+D:\Programming\С#\Progects\CarsUltimatum\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.AssemblyInfo.cs
+D:\Programming\С#\Progects\CarsUltimatum\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.runtimeconfig.json
+D:\Programming\С#\Progects\CarsUltimatum\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.runtimeconfig.dev.json
+D:\Programming\С#\Progects\CarsUltimatum\DataAccessLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.pdb
+D:\Programming\С#\Progects\CarsUltimatum\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Programming\С#\Progects\CarsUltimatum\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.dll
+D:\Programming\С#\Progects\CarsUltimatum\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.pdb
+D:\Programming\С#\Progects\CarsUltimatum\DataAccessLayer\obj\Debug\netcoreapp3.1\DataAccessLayer.genruntimeconfig.cache

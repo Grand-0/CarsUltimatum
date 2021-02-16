@@ -1,0 +1,12 @@
+D:\Programming\С#\Progects\CarsUltimatum\BusinessLogicLayer\bin\Debug\netcoreapp3.1\BusinessLogicLayer.deps.json
+D:\Programming\С#\Progects\CarsUltimatum\BusinessLogicLayer\bin\Debug\netcoreapp3.1\BusinessLogicLayer.dll
+D:\Programming\С#\Progects\CarsUltimatum\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.csprojAssemblyReference.cache
+D:\Programming\С#\Progects\CarsUltimatum\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.AssemblyInfoInputs.cache
+D:\Programming\С#\Progects\CarsUltimatum\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.AssemblyInfo.cs
+D:\Programming\С#\Progects\CarsUltimatum\BusinessLogicLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.dll
+D:\Programming\С#\Progects\CarsUltimatum\BusinessLogicLayer\bin\Debug\netcoreapp3.1\BusinessLogicLayer.pdb
+D:\Programming\С#\Progects\CarsUltimatum\BusinessLogicLayer\bin\Debug\netcoreapp3.1\DataAccessLayer.pdb
+D:\Programming\С#\Progects\CarsUltimatum\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+D:\Programming\С#\Progects\CarsUltimatum\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.csproj.CopyComplete
+D:\Programming\С#\Progects\CarsUltimatum\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.dll
+D:\Programming\С#\Progects\CarsUltimatum\BusinessLogicLayer\obj\Debug\netcoreapp3.1\BusinessLogicLayer.pdb
