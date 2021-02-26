@@ -63,8 +63,9 @@ D:\Programming\С#\Progects\CarsUltimatum\WebApi\bin\Debug\netcoreapp3.1\Busines
 D:\Programming\С#\Progects\CarsUltimatum\WebApi\bin\Debug\netcoreapp3.1\DataAccessLayer.dll
 D:\Programming\С#\Progects\CarsUltimatum\WebApi\bin\Debug\netcoreapp3.1\BusinessLogicLayer.pdb
 D:\Programming\С#\Progects\CarsUltimatum\WebApi\bin\Debug\netcoreapp3.1\DataAccessLayer.pdb
-D:\Programming\С#\Progects\CarsUltimatum\WebApi\obj\Debug\netcoreapp3.1\WebApi.csproj.CoreCompileInputs.cache
-D:\Programming\С#\Progects\CarsUltimatum\WebApi\obj\Debug\netcoreapp3.1\WebApi.MvcApplicationPartsAssemblyInfo.cache
 D:\Programming\С#\Progects\CarsUltimatum\WebApi\obj\Debug\netcoreapp3.1\WebApi.dll
 D:\Programming\С#\Progects\CarsUltimatum\WebApi\obj\Debug\netcoreapp3.1\WebApi.pdb
 D:\Programming\С#\Progects\CarsUltimatum\WebApi\obj\Debug\netcoreapp3.1\WebApi.genruntimeconfig.cache
+D:\Programming\С#\Progects\CarsUltimatum\WebApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Programming\С#\Progects\CarsUltimatum\WebApi\obj\Debug\netcoreapp3.1\WebApi.csproj.CoreCompileInputs.cache
+D:\Programming\С#\Progects\CarsUltimatum\WebApi\obj\Debug\netcoreapp3.1\WebApi.MvcApplicationPartsAssemblyInfo.cache

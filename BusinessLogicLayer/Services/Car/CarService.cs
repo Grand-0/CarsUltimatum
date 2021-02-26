@@ -26,7 +26,12 @@ namespace BusinessLogicLayer.Services.Car
 
         public void AddCar(CarDTO car, IFormFileCollection fileCollection, string defaultWebPath)
         {
-            CarDTO findCar = _mapper.Map<CarDTO>(Database.CarsRepository.GetCarsByPredicate(c => c.Name == car.Name && c.Color == car.Color));
+            CarDTO findCar = _mapper.Map<CarDTO>(Database.CarsRepository.GetCarsByPredicate(
+                c => c.Name == car.Name && 
+                c.Color == car.Color &&
+                c.YearCreate == car.YearCreate)
+                );
+
             RepeatException ex;
 
             if (findCar != null)

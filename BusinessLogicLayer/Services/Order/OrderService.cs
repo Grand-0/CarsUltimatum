@@ -4,6 +4,7 @@ using DataAccessLayer.Repository.UnitOfWork;
 using AutoMapper;
 using BusinessLogicLayer.Exceptions;
 using OrderEntity = DataAccessLayer.Entities.Order;
+using CarEntity = DataAccessLayer.Entities.Car;
 
 namespace BusinessLogicLayer.Services.Order
 {
@@ -32,6 +33,13 @@ namespace BusinessLogicLayer.Services.Order
         public void MakeOrder(OrderDTO order)
         {
             Database.OrdersRepository.Add(_mapper.Map<OrderEntity>(order));
+
+            List<CarDTO> cars = order.Cars;
+
+            foreach(CarDTO car in cars)
+            {
+                Database.CarsRepository.UpdateCount(_mapper.Map<CarEntity>(car));
+            }
 
             Database.Save();
         }

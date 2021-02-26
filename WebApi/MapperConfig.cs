@@ -12,6 +12,7 @@ namespace WebApi
             expression.AddProfile<CompaniesProfile>();
             expression.AddProfile<CustomersProfile>();
             expression.AddProfile<OrdersProfile>();
+            expression.AddProfile<UserBaseProfile>();
         }
     }
 }

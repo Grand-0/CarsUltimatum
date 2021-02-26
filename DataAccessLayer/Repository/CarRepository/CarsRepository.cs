@@ -45,5 +45,11 @@ namespace DataAccessLayer.Repository.CarRepository
         {
             _db.Entry(car).State = EntityState.Modified;
         }
+
+        public void UpdateCount(Car car)
+        {
+            car.Count -= 1;
+            _db.Entry(car).State = EntityState.Modified;
+        }
     }
 }

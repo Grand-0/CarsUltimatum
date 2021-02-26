@@ -9,6 +9,5 @@
         public string Email { get; set; }
         public decimal Purse { get; set; }
         public string Role { get; set; }
-
     }
 }

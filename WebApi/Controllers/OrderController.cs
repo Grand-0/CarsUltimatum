@@ -2,6 +2,7 @@
 using BusinessLogicLayer.Exceptions;
 using BusinessLogicLayer.ModelsDTO;
 using BusinessLogicLayer.Services.Order;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using WebApi.Models;
@@ -9,6 +10,7 @@ using WebApi.Models;
 namespace WebApi.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/[controller]")]
     public class OrderController : ControllerBase
     {
@@ -21,14 +23,13 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("GetMyOrders")]
-        public ActionResult GetMyOrders()
+        public ActionResult GetMyOrders(int customerID)
         {
-            int customerId = 0;
             IEnumerable<Order> orders;
 
             try
             {
-                orders = _mapper.Map<IEnumerable<Order>>(_service.GetOrders(customerId));
+                orders = _mapper.Map<IEnumerable<Order>>(_service.GetOrders(customerID));
             }
             catch (ValidationException ex)
             {

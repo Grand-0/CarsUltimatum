@@ -13,5 +13,7 @@ namespace DataAccessLayer.Interfaces.CarRepository
         void Add(Car car);
         void Delete(Car car);
         void Update(Car car);
+
+        void UpdateCount(Car Car);
     }
 }

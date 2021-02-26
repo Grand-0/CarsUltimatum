@@ -7,6 +7,7 @@ using BusinessLogicLayer.ModelsDTO;
 using BusinessLogicLayer.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApi.Controllers
 {
@@ -26,7 +27,7 @@ namespace WebApi.Controllers
 
         // general functionality
 
-        [HttpGet("getCar/{id}")]
+        [HttpGet("GetCar/{id}")]
         public ActionResult GetCar(int id)
         {
             Car car;
@@ -41,7 +42,7 @@ namespace WebApi.Controllers
             return Ok(car);
         }
 
-        [HttpGet("getAllCars")]
+        [HttpGet("GetAllCars")]
         public ActionResult GetAllCars()
         {
             IEnumerable<Car> cars;
@@ -56,7 +57,7 @@ namespace WebApi.Controllers
             return Ok(cars); 
         }
 
-        [HttpGet("getCarsByCompany/{companyName}")]
+        [HttpGet("GetCarsByCompany/{companyName}")]
         public ActionResult GetCarsByComapny(string comapanyName)
         {
             IEnumerable<Car> cars;
@@ -71,7 +72,7 @@ namespace WebApi.Controllers
             return Ok(cars);
         }
 
-        [HttpGet("getCarsInClass/{className}")]
+        [HttpGet("GetCarsInClass/{className}")]
         public ActionResult GetCarsByClassName(string className)
         {
             IEnumerable<Car> cars;
@@ -103,7 +104,8 @@ namespace WebApi.Controllers
 
         // administrator functionality
         [HttpPost("AddCar")]
-        public ActionResult AddCar(Car car, IFormFileCollection fileCollection)
+        [Authorize(Roles = "Admin")]
+        public ActionResult AddCar([FromForm] Car car, [FromForm] IFormFileCollection fileCollection)
         {
             try
             {
@@ -114,10 +116,16 @@ namespace WebApi.Controllers
             {
                 return BadRequest(ex.Message);
             }
+            catch(ValidationException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
             return Ok("Товар успешно добавлен");
         }
 
         [HttpPut("UpdateCar")]
+        [Authorize(Roles = "Admin")]
         public ActionResult UpdateCar(Car car)
         {
             try
@@ -132,6 +140,7 @@ namespace WebApi.Controllers
         }
 
         [HttpDelete("DeleteCar")]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteCar(int carId)
         {
             try

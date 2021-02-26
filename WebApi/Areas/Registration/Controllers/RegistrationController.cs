@@ -1,47 +1,45 @@
 ﻿using AutoMapper;
 using BusinessLogicLayer.Services.Customer;
+using WebApi.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel.Tokens.Jwt;
+using WebApi.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using WebApi.Areas.Authorization.Models;
-using WebApi.Options;
+using System.Collections.Generic;
 
-namespace WebApi.Areas.Authorization.Controllers
+namespace WebApi.Areas.Registration.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AuthorizationController : ControllerBase
+    public class RegistrationController : ControllerBase
     {
-        private ICustomerService _customerService;
+        private readonly ICustomerService _service;
         private IMapper _mapper;
-        public AuthorizationController(ICustomerService service, IMapper mapper)
+        public RegistrationController(ICustomerService customer, IMapper mapper)
         {
-            _customerService = service;
+            _service = customer;
             _mapper = mapper;
         }
 
         [HttpPost]
-        [Route("Authorize")]
-        public ActionResult Authorize([FromForm] UserBase userBase)
+        [Route("Register")]
+        public ActionResult Registration([FromForm] Customer customer)
         {
-            var user =_mapper.Map<UserDefault>(_customerService.GetCustomer(userBase.Login, userBase.Password));
+            Customer findCustomer = _mapper.Map<Customer>(_service.GetCustomer(customer.Login, customer.Password));
 
-            if (user != null)
+            if (findCustomer != null)
             {
                 var claims = new List<Claim>
                 {
-                    new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                    new Claim(ClaimsIdentity.DefaultNameClaimType, user.Login),
-                    new Claim(ClaimsIdentity.DefaultRoleClaimType, user.Role)
+                    new Claim(JwtRegisteredClaimNames.Email, findCustomer.Email),
+                    new Claim(ClaimsIdentity.DefaultRoleClaimType, findCustomer.Role)
                 };
-
 
                 JwtSecurityToken validationToken = new JwtSecurityToken(
                     issuer: JWT_Options.ISSUER,
-                    audience: JWT_Options.AUDIENCE,
+                    audience: findCustomer.Login,
                     claims: claims,
                     notBefore: DateTime.Now,
                     expires: DateTime.Now.AddMinutes(JWT_Options.LIFETIME),
@@ -53,15 +51,14 @@ namespace WebApi.Areas.Authorization.Controllers
                 var response = new
                 {
                     access_token = JWT,
-                    userName = user.Login,
-                    userRole = user.Role
+                    userName = findCustomer.Login,
+                    userRole = "Customer"
                 };
 
                 return Ok(response);
             }
 
-            return BadRequest("Неверный логин или пароль!");
+            return BadRequest("Пользователь с данным логином уже присудствует!");
         }
-
     }
 }
